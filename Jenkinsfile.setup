@@ -44,13 +44,16 @@ pipeline {
         }
 
         stage("Provision MySQL client"){
-            sh '''
-            if ! command -v mysql &>dev/null;then
-            sudo apt-get install -y mysql-client
-            fi
-            
-            mysql --version
-            echo "MySQL Done'''
+            steps{
+               sh '''
+               if ! command -v mysql &>dev/null;then
+               sudo apt-get install -y mysql-client
+               fi
+               mysql --version
+               
+               echo "MySQL Done
+               '''
+            } 
         }
 
     } 
