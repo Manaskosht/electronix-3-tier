@@ -3,7 +3,7 @@ pipeline {
 
     stages{
         stage("Tools Configure"){
-            step {echo "Tools installation pipeline"}
+            steps {echo "Tools installation pipeline"}
         }
     }
 }
