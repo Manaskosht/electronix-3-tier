@@ -1,7 +1,7 @@
 pipeline{
     agent {label 'electronix'}
 
-    enviornment{
+    environment{
         S3_BUCKET='electronix-production-18'
         CLOUDFRONT_ID='E1T8QOY0M4OG4S'
         AWS_REGION='us-east-1'
